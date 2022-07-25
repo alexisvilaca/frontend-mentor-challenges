@@ -1,0 +1,110 @@
+:root{
+    --clr-bright-orange: hsla(31, 77%, 52%, 1);
+    --clr-dark-cyan: hsla(184, 100%, 22%, 1);
+    --clr-very-dark-cyan: hsla(179, 100%, 13%, 1);
+    --clr-very-light-gray: hsla(0, 0%, 95%, 1);
+    --clr-transparent-white: hsla(0, 0%, 100%, 0.75);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lexend Deca', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--clr-very-light-gray);
+}
+
+.container{
+    width: 920px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 0.5rem;
+    margin: 3rem 1.5rem;
+    overflow: hidden;
+}
+
+.column{
+    padding: 2.8125rem;
+}
+
+.sedans{
+    background-color: var(--clr-bright-orange);
+}
+
+.suvs{
+    background-color: var(--clr-dark-cyan);
+}
+
+.luxury{
+    background-color: var(--clr-very-dark-cyan);
+}
+
+.title{
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: var(--clr-very-light-gray);
+    margin: 2.2rem 0;
+}
+
+.description{
+    font-size: 0.9375rem;
+    line-height: 1.5rem;
+    margin-bottom: 5.313rem;
+    color: var(--clr-transparent-white);
+    opacity: 0.85;
+}
+
+.btn{
+    font-size: 1rem;
+    padding: 0.9rem 2rem;
+    border: 0;
+    cursor: pointer;
+    border-radius: 1.6rem;
+    background-color: var(--clr-very-light-gray);
+    border: 2px solid transparent;
+    transition: background 100ms ease-in-out,
+    color 100ms ease-in-out,
+    border 100ms ease-in-out;
+}
+
+.btn:hover{
+    background-color: transparent;
+    color: var(--clr-very-light-gray);
+    border: 2px solid var(--clr-very-light-gray);
+}
+
+.btn-sedans{
+    color: var(--clr-bright-orange);
+}
+
+.btn-suvs{
+    color: var(--clr-dark-cyan);
+}
+
+.btn-luxury{
+    color: var(--clr-very-dark-cyan);
+}
+
+
+/* Mobile */
+@media only screen and (max-width: 768px) {
+    .container{
+      flex-direction: column;
+    }
+
+    .title{
+        margin: 1.8rem 0;
+    }
+
+    .description{
+        margin-bottom: 1.875rem;
+    }
+}
