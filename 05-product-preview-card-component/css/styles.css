@@ -1,0 +1,147 @@
+:root{
+    --clr-dark-cyan: hsl(158, 36%, 37%);
+    --clr-cream: hsl(30, 38%, 92%);
+    --clr-very-dark-blue: hsl(212, 21%, 14%);
+    --clr-dark-grayish-blue: hsl(228, 12%, 48%);
+    --clr-hover: hsla(156, 42%, 18%, 1);
+    --clr-white: hsl(0, 0%, 100%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--clr-cream);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card{
+    display: flex;
+    max-width: 600px;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    background-color: var(--clr-white);
+    margin: 1rem;
+}
+
+.image, .content{
+    flex: 1 0 50%;
+}
+
+.image{
+    background-image: url(../images/image-product-desktop.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.content{
+    padding: 2.125rem;
+}
+
+.image img{
+    max-width: 100%;
+    display: block;
+}
+
+.category{
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    color: var(--clr-dark-grayish-blue);
+    letter-spacing: 0.4rem;
+}
+
+.title{
+    font-family: 'Fraunces', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 2.2rem;
+    margin: 1.625rem 0;
+    color: var(--clr-very-dark-blue);
+}
+
+.description{
+    font-size: 0.875rem;
+    line-height: 1.4rem;
+    color: var(--clr-dark-grayish-blue);
+    margin-bottom: 1.625rem;
+}
+
+.price{
+    margin-bottom: 1.625rem;
+    display: flex;
+    align-items: center;
+}
+
+.price p{
+    display: inline-block;
+}
+
+.discount{
+    font-family: 'Fraunces', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--clr-dark-cyan);
+    margin-right: 1.25rem;
+}
+
+.no-discount{
+    font-size: 0.rem;
+    color: var(--clr-dark-grayish-blue);
+    text-decoration: line-through;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 700;
+    width: 100%;
+    border: 0;
+    padding: 0.875rem 0;
+    border-radius: 0.5rem;
+    color: var(--clr-white);
+    background-color: var(--clr-dark-cyan);
+    cursor: pointer;
+    transition: background 125ms ease-in;
+}
+
+.btn:hover{
+    background-color: var(--clr-hover);
+}
+
+@media only screen and (max-width: 560px) {
+    .card{
+        flex-direction: column;
+    }
+    .image{
+        flex-basis: 240px;
+        background-position: center -150px;
+    }
+    .content{
+        padding: 1.625rem;
+    }
+    .title{
+        margin: 1rem 0;
+    }
+    .description{
+        margin-bottom: 1rem;
+    }
+    .price{
+        margin-bottom: 1rem;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .image{
+        flex-basis: 240px;
+        background-position: center -80px;
+    }
+}
