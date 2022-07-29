@@ -1,0 +1,140 @@
+:root{
+    --clr-red: hsl(0, 78%, 62%);
+    --clr-cyan: hsl(180, 62%, 55%);
+    --clr-orange: hsl(34, 97%, 64%);
+    --clr-blue: hsl(212, 86%, 64%);
+    --clr-very-dark-blue: hsl(234, 12%, 34%);
+    --clr-grayish-blue: hsl(229, 6%, 66%);
+    --clr-very-light-gray: hsl(0, 0%, 98%);
+    --clr-white: #ffffff;
+    --clr-shadow: hsla(212, 50%, 64%, 0.2);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--clr-very-light-gray);
+}
+
+h1{
+    font-size: 2.25rem;
+    line-height: 3rem;
+    color: var(--clr-very-dark-blue);
+}
+
+h2{
+    font-size: 1.25rem;
+    margin-bottom: 0.7rem;
+    color: var(--clr-very-dark-blue);
+}
+
+p{
+    font-size: 1rem;
+    color: var(--clr-grayish-blue);
+}
+
+.hero{
+    max-width: 500px;
+    width: 90%;
+    margin: 4rem auto 0 auto;
+    text-align: center;
+}
+
+.hero-title{
+    font-weight: 200;
+}
+
+.hero-description{
+    margin-top: 1.5rem;
+}
+
+.card-container{
+    max-width: 1100px;
+    width: 85%;
+    margin: 4.25rem auto 2rem auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.card{
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    position: relative;
+    background-color: var(--clr-white);
+    box-shadow: 2px 10px 15px var(--clr-shadow);
+}
+
+.card-1{
+    border-top: 4px solid var(--clr-cyan);
+}
+
+.card-2{
+    border-top: 4px solid var(--clr-red);
+}
+
+.card-3{
+    border-top: 4px solid var(--clr-orange);
+}
+
+.card-4{
+    border-top: 4px solid var(--clr-blue);
+}
+
+.card-image{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2rem;
+}
+
+.card p{
+    font-size: 0.9rem;
+    line-height: 1.6rem;
+}
+
+/* Mobile */
+@media only screen and (max-width: 560px) {
+    h1{
+        font-size: 1.5rem;
+        line-height: 2.25rem;
+    }
+}
+
+@media only screen and (min-width: 640px) {
+    .card-container{
+        grid-template-columns: repeat(2, 1fr);
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width: 980px) {
+    .card-container{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        width: 95%;
+        gap: 2rem;
+    }
+    .card-1{
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        transform: translateY(50%);
+    }
+    .card-2{
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }
+    .card-3{
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+    .card-4{
+        grid-column: 3 / 4;
+        grid-row: 1 / 2;
+        transform: translateY(50%);
+    }
+}
